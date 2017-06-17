@@ -31,6 +31,7 @@ function createMenu()
     Rules:SetSize(250, 250)
     Rules:OpenURL("www.google.co.uk")
     local AdminList = vgui.Create("HTML", Board)
+        ContentIcon:SetAdminOnly( true adminOnly )
     AdminList:SetPos(25, 50)
     AdminList:SetSize(250, 250)
     local order = {}
