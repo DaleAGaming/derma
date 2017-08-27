@@ -1,5 +1,5 @@
 hook.Add( "Think", "MenuKeyListener", function()
-    if ( input.IsKeyDown( KEY_F2 ) and !menuOpen ) then
+    if ( input.IsKeyDown( KEY_F2 ) and !menuOpen ) then --Change KEY_F2 to KEY_F1 or KEY_A to bind it to a different key
         createMenu()
     end
 end )
@@ -9,7 +9,7 @@ function createMenu()
 
   local Board = nil
   local Name = "Github"
-
+-- Edit as you wish. Make sure you know what you are doing.
   if not IsValid(Board) then
     Board = vgui.Create("DFrame")
     Board:SetSize(750, 500)
@@ -29,9 +29,9 @@ function createMenu()
     local Rules = vgui.Create("HTML", Board)
     Rules:SetPos(25, 50)
     Rules:SetSize(250, 250)
-    Rules:OpenURL("www.google.co.uk")
+    Rules:OpenURL("www.google.co.uk") --Change this asap
     local AdminList = vgui.Create("HTML", Board)
-        ContentIcon:SetAdminOnly( true adminOnly )
+        ContentIcon:SetAdminOnly( true adminOnly ) --This line of code is optional. Remove this to fix various things.
     AdminList:SetPos(25, 50)
     AdminList:SetSize(250, 250)
     local order = {}
